@@ -7,7 +7,7 @@ import os
 client = TestClient(app)
 
 if 'AUTH_KEY' not in os.environ:
-    pytest.exit("You don't have your API key set.")
+    pytest.exit("You need to set AUTH_KEY environment variable.")
 else:
     auth_token = os.environ['AUTH_KEY']
 
